@@ -1,0 +1,30 @@
+site_name: 'RedHerd Framework'
+site_url: https://redherd.readthedocs.io/
+docs_dir: docs
+
+nav:
+  - 'Introduction':
+    - 'What is RedHerd?' : 'index.md'
+  - 'Design': 
+    - 'Terminology': 'design/terminology.md'
+    - 'Architecture': 'design/architecture.md'
+    - 'Features': 'design/features.md'
+  - 'Getting Started':
+    - 'Setup': 'getting-started/setup.md'
+  - 'Users Guide':
+    - 'Framework Management': 'users-guide/framework-management.md'
+    - 'Client Management': 'users-guide/client-management.md'
+    - 'Asset Management': 'users-guide/asset-management.md'
+    - 'Asset Tasking': 'users-guide/asset-tasking.md'
+  - 'Developers Guide':
+    - 'Module Implementation': 'developers-guide/module-implementation.md'
+    - 'API Usage': 'developers-guide/api-usage.md'
+    - 'Output Consumption': 'developers-guide/output-consumption.md'
+  - 'References':
+    - 'Troubleshooting': 'references/troubleshooting.md'
+    - 'Contributing': 'references/contributing.md'
+    - 'Credits': 'references/credits.md'
+
+theme: readthedocs
+markdown_extensions:
+  - admonition
