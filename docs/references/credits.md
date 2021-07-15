@@ -48,9 +48,23 @@
 </tr>
 </table>
 
+
 ## Contributors
 
-None yet. Do you want to be the first?
+<table align="center">
+<tr>
+<td align="center" style="border: 0px !important; background-color: white;">
+<a href="https://gitlab.com/TreCani">
+<img src="https://secure.gravatar.com/avatar/745331e611fbda9faa605103b6361431?s=180&d=identicon" width="100px;" alt=""/><br />
+<sub><b>Giulio Andini</b></sub>
+</a>
+<br /><br />
+<a href="" title="Content">🖋</a> 
+<a href="" title="Bug reports">🐛</a>  
+</td>
+</tr>
+</table>
+
 
 ## Citations
 
@@ -63,6 +77,6 @@ If you want to cite the RedHerd repository you can use the following BibTeX entr
   year = {2021},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/redherddevs/redherd.git}},
+  howpublished = {\url{https://github.com/redherd-project/redherd-framework.git}},
 }
 ```
