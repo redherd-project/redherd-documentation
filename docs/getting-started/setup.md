@@ -13,7 +13,7 @@ Following are some recommended and tested specifications for the host machine:
 
 ## 1. Obtain
 
-The first step involves to obtain the latest release of the framework cloning it from the official [`GitHub`](https://github.com/redherd-project/redherd-framework) repository:
+The first step involves to obtain the latest release of the framework cloning it from the official GitHub [`repository`](https://github.com/redherd-project/redherd-framework):
 
 ```bash
 $ git clone https://github.com/redherd-project/redherd-framework.git
