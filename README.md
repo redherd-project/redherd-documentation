@@ -5,17 +5,14 @@
 # RedHerd Documentation
 
 <br>
-<img src="https://redherd.readthedocs.io/en/latest/images/logo.png" align="center" width="900px" alt="RedHerd Documentation">
+<img src="https://redherd.readthedocs.io/en/latest/images/logo.png" align="center" width="250px" alt="RedHerd Documentation">
 <br><br>
-	
-<div align="left">
-This repository contains the [`documentation`](https://redherd.readthedocs.io/) of the [`RedHerd`](https://github.com/redherd-project/redherd-framework) Framework.
-</div>
 
 </td>
 </tr>
 </table>
 
+This repository contains the [`documentation`](https://redherd.readthedocs.io/) of the [`RedHerd`](https://github.com/redherd-project/redherd-framework) Framework.
 
 ## License
 
