@@ -1,4 +1,4 @@
-# Setup
+# Setup :: Intro
 
 The entire solution is cross platform and can be deployed both on premise and in a Cloud-based environment. The released implementation focuses on a `Debian` host machine tested both locally and remotely.
 

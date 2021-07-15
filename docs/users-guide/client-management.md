@@ -1,4 +1,4 @@
-# Client Management
+# Client Management :: Intro
 
 As for the asset also for the client we have tried to provide high flexibility and reduced interaction. Again, a one-line script interacts with Distribution-Server, downloads the user-related `OpenVPN` configuration file and initiates the VPN encrypted channel.
 

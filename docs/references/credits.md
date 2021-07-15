@@ -1,6 +1,4 @@
-# Credits
-
-## Developers
+# Developers
 
 <table align="center">
 
@@ -49,7 +47,7 @@
 </table>
 
 
-## Contributors
+# Contributors
 
 <table align="center">
 <tr>
@@ -66,7 +64,7 @@
 </table>
 
 
-## Citations
+# Citations
 
 If you want to cite the RedHerd repository you can use the following BibTeX entry:
 

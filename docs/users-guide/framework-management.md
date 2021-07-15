@@ -1,4 +1,6 @@
-# Framework Management
+# Framework Management :: Intro
+
+This section provides a deeper insight on how to fully manage the framework deployment process and all its features.
 
 ## Destroy
 

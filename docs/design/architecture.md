@@ -1,4 +1,4 @@
-# Architecture
+<h1>Architecture</h1>
 
 RedHerd uses some specialized Docker containers in order to integrate many community acclaimed open-source products with a custom application layer, implemented for interoperability purposes. These containers have been designed to compartmentalise features and to allow horizontal scaling if needed. The described architecture offers a high level of automation by allowing minimized user interaction during the asset setup process and is bounded by a Virtual Private Network (VPN) granting Operations Security (OPSEC) by design.
 

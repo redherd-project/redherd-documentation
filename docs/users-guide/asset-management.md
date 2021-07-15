@@ -1,4 +1,4 @@
-# Asset Management
+# Asset Management :: Intro
 
 One of the aspects which is particularly relevant is the asset setup and join procedure. The implementation of this feature has been ruled by two design drivers: high **flexibility** and **low user interaction**. The former characteristic is needed in order to grant a remarkable level of compatibility with different operating systems, while the latter is fundamental to minimize failures and reduce the skills required to add a new asset to RedHerd. The result is a manually triggered yet fully automated procedure that involves only the execution of a `one-line` script which is different for each compatible platform: `Bash` for Android and Linux, `PowerShell` for Windows and `Zsh` for MacOS.
 

@@ -1,4 +1,4 @@
-# Features
+<h1>Features</h1>
 
 RedHerd has several overwhelming features that characterize it with strong orchestration capabilities:
 

@@ -1,4 +1,4 @@
-# Contributing
+<h1>Contributing</h1>
 
 Ready to contribute? Here’s how to set up RedHer for local development.
 

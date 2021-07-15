@@ -1,5 +1,6 @@
-# Asset Tasking
+# Asset Tasking :: Intro
 
+This section describes the steps required to access the framework GUI and assign tasks to assets.
 
 ## 1. Herd-View login
 

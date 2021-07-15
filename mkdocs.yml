@@ -28,5 +28,3 @@ nav:
 theme: readthedocs
 markdown_extensions:
   - admonition
-  - toc:
-      baselevel: 2

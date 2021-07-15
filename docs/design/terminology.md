@@ -1,4 +1,4 @@
-# Terminology
+<h1>Terminology</h1>
 
 | Name | Description |
 | --- | --- |

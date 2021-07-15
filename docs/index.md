@@ -1,4 +1,4 @@
-# What is RedHerd?
+# Introduction
 
 RedHerd is a collaborative and serverless framework for orchestrating a geographically distributed group of assets capable of <del>conducting</del> simulating complex Offensive Cyberspace Operations (OCOs). 
 

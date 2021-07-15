@@ -1,8 +1,8 @@
-# API Usage
-
-## Background
+# API Usage :: Intro
 
 The interaction with Herd-Server is realized by a set of RESTful API, some of which are authenticated through JSON Web Token (JWT) claims. This system is normally used by the Herd-View to dispatch all the tasks, but it has to be intended as a general interface suitable for interacting with the assets through the Herd-Server.
+
+## Background
 
 Herd-Server responds to the REST requests by using the [`JSend`](https://github.com/omniti-labs/jsend) specification, offering a consistent JSON response format which could be universally recognized and providing an easy way to consume and interact with the framework components.
 

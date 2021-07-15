@@ -1,4 +1,4 @@
-# Troubleshooting
+<h1>Troubleshooting</h1>
 
 ### Cannot connect to Herd-View
 

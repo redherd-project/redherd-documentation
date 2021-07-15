@@ -1,4 +1,4 @@
-# Module Implementation
+# Module Implementation :: Intro
 
 The term task refers to the abstract representation of an operator intent. Each task needs a static implementation in order to be executed and this implementation is called **module** while its instance is a **process**. A set of modules carrying out similar tasks is grouped into a common **topic**, which is the representation of one or more characteristics bringing together a number of tasks and, transitively, one or more modules (e.g. scanning, spoofing, Wi-Fi, ...). Concretely, to develop a new module follow the indications below.
 
