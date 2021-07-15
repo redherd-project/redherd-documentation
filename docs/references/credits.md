@@ -66,7 +66,7 @@
 
 # Citations
 
-If you want to cite the RedHerd repository you can use the following BibTeX entry:
+If you want to cite the RedHerd Framework you can use the following BibTeX entry:
 
 ```
 @misc{RedHerdFramework,
@@ -78,3 +78,8 @@ If you want to cite the RedHerd repository you can use the following BibTeX entr
   howpublished = {\url{https://github.com/redherd-project/redherd-framework.git}},
 }
 ```
+
+# Contact us
+
+Feel free to contact us at this e-mail address:
+<img src="contactus.png" style="width: 30%;" alt="Contact us">
