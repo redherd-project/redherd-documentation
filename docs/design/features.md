@@ -1,5 +1,7 @@
 <h1>Features</h1>
 
+<img src="redherd-net.png" style="display: block; margin-left: auto; margin-right: auto; width: 100%;" alt="RedHerd Network">
+
 RedHerd has several overwhelming features that characterize it with strong orchestration capabilities:
 
 * **Intuitive Interface**: it provides, through Herd-View, an intuitive web application to easily interact with the assets;
