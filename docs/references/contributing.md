@@ -1,6 +1,6 @@
 <h1>Contributing</h1>
 
-Ready to contribute? Here’s how to set up RedHer for local development.
+Ready to contribute? Here’s how to set up RedHerd for local development.
 
 1. **Fork** the RedHerd repo on GitHub.
 2. **Clone** your fork locally:
