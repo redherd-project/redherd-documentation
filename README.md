@@ -5,7 +5,7 @@
 # RedHerd Documentation
 
 <br>
-<img src="#" align="center" width="250px" alt="RedHerd Documentation">
+<img src="https://redherd.readthedocs.io/en/latest/images/logo.png" align="center" width="250px" alt="RedHerd Documentation">
 <br><br>
 
 </td>
