@@ -34,7 +34,7 @@ The first step requires the generation an **.info** file containing the module m
             },       
         ],
     "tags": [
-        "automatic"                       // "automatic", "interactive" or "pivot" according to the module execution mode
+        "automatic"                       // "automatic", "interactive" or "pivotable" according to the module execution mode
     ]
 }
 ```
@@ -135,7 +135,7 @@ class ModuleName extends LinuxModule
         }
         else
         {
-            this.reportAndExit("Invalid input provided");
+            this.reportAndExit(this.buildErrorMessage("Invalid input provided"));
         }
     }
     
@@ -203,12 +203,12 @@ class ModuleName extends LinuxModule
                 });
                 deasync.loopWhile(() => !response);
 
-                this.reportAndExit("Operation Completed");
+                this.reportAndExit(this.buildInfoMessage("Operation started"));
             }
         }
         else
         {
-            this.reportAndExit("Invalid input provided");
+            this.reportAndExit(this.buildErrorMessage("Invalid input provided"));
         }
         return response;
     }
@@ -265,7 +265,7 @@ class ModuleName extends LinuxModule
                 // ******************************
                 this.do(task, "cmd_res", false, whatIf);
 
-                feedback = "[!] Connect to https://10.10.0.3:" + port + "?t=" + this.token;
+                feedback = this.buildWarnMessage("Connect to https://10.10.0.3:" + port + "?t=" + this.token);
             } 
             else 
             {
@@ -298,12 +298,12 @@ class ModuleName extends LinuxModule
                 // ******************************
                 this.do(task, "cmd_res", false, whatIf);
     
-                feedback = "[ Operation Initiated ]";
+                feedback = this.buildInfoMessage("Operation started");
             }
         }
         else
         {
-            feedback = "[ Invalid input provided ]";
+            this.reportAndExit(this.buildErrorMessage("Invalid input provided"));
         }
         this.reportAndExit(feedback);
     }
@@ -319,7 +319,7 @@ class ModuleName extends LinuxModule
 }
 ```
 
-Each module class, deriving from one of the base classes, must have a *constructor* and must expose at least three methods: *run* (or its alternative *interact* and *pivot*), *configure* and *validate*:
+Each module class, deriving from one of the base classes, must have a *constructor* and must expose at least three methods: *run* (or its alternative *interact* and *pivotable*), *configure* and *validate*:
 
 - the *constructor* is responsible for specifying the *MODULE_NAME*, according to the one inserted into the *.info* file, and retrieving the input parameters from a specialized object named *context*, again as specified in the metadata file:
 
@@ -363,6 +363,11 @@ Each module class, deriving from one of the base classes, must have a *construct
 !!! note
     Both **.info** and **.js** files must be placed in the path `herd-server/bin/module/collection` to make the module available.
 
+!!! note
+    Modules can be created/updated while the framework is active. It is just necessary to add/modify module files and then restart the Herd-Server:
+    ```
+    $ sudo herd-cli server -r
+    ```
 
 ## Hands-on
 
@@ -414,7 +419,6 @@ class AndroidPing extends LinuxModule
         if (this.validate())
         {
             let task = "ping -c 4 " + this.target;
-            //let task = "ping " + this.target;
 
             //  Async execution
             // ******************************
@@ -422,7 +426,7 @@ class AndroidPing extends LinuxModule
         }
         else
         {
-            this.reportAndExit("Invalid input provided");
+            this.reportAndExit(this.buildErrorMessage("Invalid input provided"));
         }
     }
 
@@ -486,7 +490,7 @@ class DebianNmapTCP extends LinuxModule
         }
         else
         {
-            this.reportAndExit("Invalid input provided");
+            this.reportAndExit(this.buildErrorMessage("Invalid input provided"));
         }
     }
     
@@ -626,12 +630,12 @@ class DebianAirgeddon extends LinuxModule
                 });
                 deasync.loopWhile(() => !response);
 
-                this.reportAndExit("Operation Completed");
+                feedback = this.buildInfoMessage("Operation started");
             }
         }
         else
         {
-            this.reportAndExit("Invalid input provided");
+            this.reportAndExit(this.buildErrorMessage("Invalid input provided"));
         }
         return response;
     }
@@ -760,7 +764,7 @@ class DebianMotionCam extends LinuxModule
                 // ******************************
                 this.do(task, "cmd_res", false, whatIf);
 
-                feedback = "[!] Connect to https://10.10.0.3:" + port + "?t=" + this.token;
+                feedback = this.buildWarnMessage("Connect to https://10.10.0.3:" + port + "?t=" + this.token);
             } 
             else 
             {
@@ -793,12 +797,12 @@ class DebianMotionCam extends LinuxModule
                 // ******************************
                 this.do(task, "cmd_res", false, whatIf);
     
-                feedback = "[ Operation Initiated ]";
+                feedback = this.buildInfoMessage("Operation started");
             }
         }
         else
         {
-            feedback = "[ Invalid input provided ]";
+            feedback = this.buildErrorMessage("Invalid input provided");
         }
         this.reportAndExit(feedback);
     }

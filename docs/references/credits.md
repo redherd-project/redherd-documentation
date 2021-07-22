@@ -32,8 +32,8 @@
 <table align="center">
 <tr>
 <td align="center" style="border: 0px !important; background-color: white;">
-<a href="https://gitlab.com/TreCani">
-<img src="https://secure.gravatar.com/avatar/745331e611fbda9faa605103b6361431?s=100&d=identicon" width="100px;" alt=""/><br />
+<a href="https://github.com/TreCani-96">
+<img src="https://avatars.githubusercontent.com/u/58191008?v=4" width="100px;" alt=""/><br />
 <sub><b>Giulio Andini</b></sub>
 </a>
 </td>
