@@ -33,7 +33,7 @@
 <tr>
 <td align="center" style="border: 0px !important; background-color: white;">
 <a href="https://github.com/TreCani-96">
-<img src="https://avatars.githubusercontent.com/u/58191008?v=4s=100" width="100px;" alt=""/><br />
+<img src="https://avatars.githubusercontent.com/u/58191008?v=4?s=100" width="100px;" alt=""/><br />
 <sub><b>Giulio Andini</b></sub>
 </a>
 </td>
