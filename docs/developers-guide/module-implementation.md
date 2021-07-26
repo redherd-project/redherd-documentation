@@ -364,10 +364,7 @@ Each module class, deriving from one of the base classes, must have a *construct
     Both **.info** and **.js** files must be placed in the path `herd-server/bin/module/collection` to make the module available.
 
 !!! note
-    Modules can be created/updated while the framework is active. It is just necessary to add/modify module files and then restart the Herd-Server:
-    ```
-    $ sudo herd-cli server -r
-    ```
+    Modules can be created/updated while the framework is active.
 
 ## Hands-on
 
