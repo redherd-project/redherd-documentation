@@ -350,6 +350,7 @@ Each module class, deriving from one of the base classes, must have a *construct
 | Validator.validateCIDR(value) | 192.168.1.1/24 |
 | Validator.validateHostname(value) | test.target.local |
 | Validator.validateHost(value) | hostname or IP |
+| Validator.validateURL(value) | http[s]://www.example.com |
 | Validator.validateTcpUdpPort(value) | 8080 |
 | Validator.validateTcpUdpPortRange(value) | 8080-8088 |
 | Validator.validateTcpUdpPortSubset(value) | 1-1024,3000,5000-8080 | 
@@ -364,7 +365,10 @@ Each module class, deriving from one of the base classes, must have a *construct
     Both **.info** and **.js** files must be placed in the path `herd-server/bin/module/collection` to make the module available.
 
 !!! note
-    Modules can be created/updated while the framework is active.
+    Modules can be created/updated while the framework is active. It is just necessary to add/modify module files and then restart the Herd-Server:
+    ```
+    $ sudo herd-cli server -r
+    ```
 
 ## Hands-on
 

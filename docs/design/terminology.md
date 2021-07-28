@@ -7,5 +7,5 @@
 | `module` | The code implementation of a task that can be executed by asset. |
 | `process` | The dynamic instance of a module. |
 | `task` | The abstract representation of an operator intent. |
-| `topic` | A group of modules that share a common intent (e.g. port scanning, Wi-Fi, ...). |
+| `topic` | A group of modules that shares a common intent (e.g. port scanning, Wi-Fi, ...). |
 

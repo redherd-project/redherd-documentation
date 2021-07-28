@@ -17,3 +17,8 @@
 1. Remove the `asset` via `Herd-CLI` one-liner
 2. Synchronize `asset` device local time with `Herd-Server` time
 3. Try to add the `asset` again via `Herd-CLI` one-liner
+
+### Commands not executed by online assets
+
+1. Logout from the `Herd-View`
+2. Login again into the `Herd-View` to get a fresh token
