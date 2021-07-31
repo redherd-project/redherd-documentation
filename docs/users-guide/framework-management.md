@@ -161,6 +161,9 @@ Continue? [y/N]: y
 !!! note
     Assets are able to automatically re-join after a framework destroy or quick-deploy.
 
+!!! warning
+    Every time you perform a framework re-deploy, you have to logout from the Herd-View and login again in order to remove the old access token and get a fresh one. Alternatively, you can delete browser cookies.
+
 
 ## Database re-initialization
 
@@ -260,6 +263,9 @@ Continue? [y/N]: y
 
 !!! note
     Re-initialize the Certification Authority if you want to cut-off all assets. 
+
+!!! warning
+    Remove the old CA certificate and import the new one to access again the Herd-View.
 
 !!! warning
     Assets will not be able to automatically re-join the framework since SSL certificates are not trusted anymore.

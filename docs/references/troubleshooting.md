@@ -18,7 +18,24 @@
 2. Synchronize `asset` device local time with `Herd-Server` time
 3. Try to add the `asset` again via `Herd-CLI` one-liner
 
-### Commands not executed by online assets
+### Modules not executed by online assets
 
 1. Logout from the `Herd-View`
-2. Login again into the `Herd-View` to get a fresh token
+2. Login into the `Herd-View` to get a fresh token
+3. Try to execute modules on online assets
+
+If the problem is not solved:
+
+1. Logout from the `Herd-View`
+2. Delete browser cookies
+3. Login into the `Herd-View` to get a fresh token
+4. Try to execute modules on online assets
+
+If the problem is not solved:
+
+1. Logout from the `Herd-View`
+2. Delete browser cookies
+3. Remove RedHerd CA certificate
+4. Download and import RedHerd CA certificate
+5. Login into the `Herd-View` to get a fresh token
+6. Try to execute modules on online assets
