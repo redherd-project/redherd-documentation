@@ -6,11 +6,7 @@ The interaction with Herd-Server is realized by a set of RESTful API, some of wh
 
 Herd-Server responds to the REST requests by using the [`JSend`](https://github.com/omniti-labs/jsend) specification, offering a consistent JSON response format which could be universally recognized and providing an easy way to consume and interact with the framework components.
 
-In particular, CRUD operations (`create`, `read` or `retrieve`, `update`, `delete`) are performed through their corresponding HTTP verbs:
-- POST method to `create` items;
-- GET method to `retrieve` items;
-- PUT method to `update` an existing item;
-- DELETE method to `remove` items.
+In particular, CRUD operations (`create`, `read` or `retrieve`, `update`, `delete`) are performed through their corresponding HTTP verbs: POST method is used to `create` items, GET method permits to `retrieve` items, PUT method performs an existing item `update`, and DELETE method allows to `remove` items.
 
 In addition, the execution of a module is triggered using a dedicated endpoint and a specific POST request. This behaviour expands the number of functions offered by a traditional RESTful service implementing the CRUD(E) operations set which introduces the additional `execute` verb. An entity which sends a POST request to run a module, receives a JSend response containing the `sessionid` reflected into the output flow.
 
