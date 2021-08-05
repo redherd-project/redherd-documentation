@@ -319,7 +319,7 @@ class ModuleName extends LinuxModule
 }
 ```
 
-Each module class, deriving from one of the base classes, must have a *constructor* and must expose at least three methods: *run* (or its alternative *interact* and *pivotable*), *configure* and *validate*:
+Each module class, deriving from one of the base classes, must have a *constructor* and must expose at least three methods: *run* (or its alternative *interact* and *pivot*), *configure* and *validate*:
 
 - the *constructor* is responsible for specifying the *MODULE_NAME*, according to the one inserted into the *.info* file, and retrieving the input parameters from a specialized object named *context*, again as specified in the metadata file:
 
