@@ -11,9 +11,36 @@ As for the asset also for the client we have tried to provide high flexibility a
 !!! warning
     There could be VPN connection issues if the `client` device and `Herd-Server` are not time synchronized.
 
+## Docker
+
+The dockerized client case is the most simple. The one-liner provided locally by the Herd-CLI creates an Ubuntu container that joins the infrastructure and allows the host machine to act as a client: 
+
+```bash
+$ herd-cli endpoint -s 172.23.16.16 -o docker -m client -i 1
+
+                                                                                        
+  *                                          #                                          
+ **                                          (#                                         
+ **                                          ((#                                        
+ ***                                        #((#                                        
+  ****(         (*****    ((((((          #((((                                         
+   *******************   ((((((((((((((((((((#                                          
+     *****************   ((((((((((((((((((                                             
+          ***********       (((((((((((                                                 
+              *******      (((((((#                                                     
+                  (*****   (((   ______ _______ ______  _     _ _______  ______ ______  
+                   *****  (((   |_____/ |______ |     \ |_____| |______ |_____/ |     \ 
+                    ****  ((    |    \_ |______ |_____/ |     | |______ |    \_ |_____/ 
+                     *** ((#    Command-line Interface                                  
+                     *** (((                                                            
+                                                                                        
+
+sudo docker run -d --rm --cap-add=NET_ADMIN --device /dev/net/tun -e DSTRSRV_PUBLIC_ADDRESS="172.23.16.16" -e USERNAME="USER_001" -e PASSWORD="l9tcuv6GKUDBYtcyt2fyEcktDE578cs1" --network host -v $(pwd)/redherd-certificates:/usr/local/share/ca-certificates --name redherd-client redherd/client
+```
+
 ## Debian
 
-The Debian case is the simplest since it is just required to run the one-liner provided by Herd-CLI locally:
+It is just required to run the Herd-CLI one-liner on the Debian host:
 
 ```bash
 $ herd-cli endpoint -s 172.23.16.16 -o debian -m client -i 1
@@ -35,10 +62,11 @@ $ herd-cli endpoint -s 172.23.16.16 -o debian -m client -i 1
                      *** (((                                                            
                                                                                         
 
-sudo bash -c "apt update && apt install openvpn -y && curl -k -u USER_00001:l9tcuv6GKUDBYtcyt2fyEcktDE578cs1 https://172.23.16.16:8443/f6865d8c51bb7a1ba155bdfbeb3f686e/config.ovpn > ./redherd.ovpn && /usr/sbin/openvpn ./redherd.ovpn
+sudo bash -c "apt update && apt install openvpn -y && curl -k -u USER_001:l9tcuv6GKUDBYtcyt2fyEcktDE578cs1 https://172.23.16.16:8443/f6865d8c51bb7a1ba155bdfbeb3f686e/config.ovpn > ./redherd.ovpn && /usr/sbin/openvpn ./redherd.ovpn
 ```
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TPh7muGw2AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="margin-bottom: 30px;" allowfullscreen></iframe>
+
 
 ## Windows
 
@@ -64,7 +92,7 @@ $ herd-cli endpoint -s 172.23.16.16 -o windows -m client -i 1
                                                                                         
 
 $block = {
-[Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}; $webclient = New-Object System.Net.WebClient; $basic = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes("USER_00001" + ":" + "l9tcuv6GKUDBYtcyt2fyEcktDE578cs1"));$webclient.Headers["Authorization"] = "Basic ";
+[Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}; $webclient = New-Object System.Net.WebClient; $basic = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes("USER_001" + ":" + "l9tcuv6GKUDBYtcyt2fyEcktDE578cs1"));$webclient.Headers["Authorization"] = "Basic ";
 $webclient.DownloadFile("https://172.23.16.16:8443/f6865d8c51bb7a1ba155bdfbeb3f686e/config.ovpn", "redherd.ovpn")
 }; powershell -ep bypass -nop -c $block
 
@@ -99,7 +127,7 @@ $ herd-cli endpoint -s 172.23.16.16 -o android -m client -i 1
 
  [!] Manually download the OpenVPN config file: 
  [!] Url: https://172.23.16.16:8443/f6865d8c51bb7a1ba155bdfbeb3f686e/config.ovpn 
- [!] Username: USER_00001 
+ [!] Username: USER_001 
  [!] Password: l9tcuv6GKUDBYtcyt2fyEcktDE578cs1 
 ```
 
@@ -126,7 +154,7 @@ $ herd-cli endpoint -s 172.23.16.16 -o macos -m client -i 1
                      *** (((                                                            
                                                                                         
 
-curl -k -u USER_00001:l9tcuv6GKUDBYtcyt2fyEcktDE578cs1 https://172.23.16.16:8443/f6865d8c51bb7a1ba155bdfbeb3f686e/config.ovpn > ./redherd.ovpn
+curl -k -u USER_001:l9tcuv6GKUDBYtcyt2fyEcktDE578cs1 https://172.23.16.16:8443/f6865d8c51bb7a1ba155bdfbeb3f686e/config.ovpn > ./redherd.ovpn
 
  [!] Manually run OpenVPN with the downloaded `redherd.ovpn` config file 
 ```

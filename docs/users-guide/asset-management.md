@@ -13,7 +13,62 @@ This one-liner interacts with Distribution-Server and acts as a dropper download
 !!! note
     As an example, credentials corresponding to the user with id 2 (`-i 2`) have been considered.
 
-    
+
+## Docker
+
+!!! note
+    Only one docker asset is allowed per machine.
+
+
+### Add
+
+```bash
+$ herd-cli endpoint -s 172.23.16.16 -o docker -m install -i 2
+
+  *                                          #                                          
+ **                                          (#                                         
+ **                                          ((#                                        
+ ***                                        #((#                                        
+  ****(         (*****    ((((((          #((((                                         
+   *******************   ((((((((((((((((((((#                                          
+     *****************   ((((((((((((((((((                                             
+          ***********       (((((((((((                                                 
+              *******      (((((((#                                                     
+                  (*****   (((   ______ _______ ______  _     _ _______  ______ ______  
+                   *****  (((   |_____/ |______ |     \ |_____| |______ |_____/ |     \ 
+                    ****  ((    |    \_ |______ |_____/ |     | |______ |    \_ |_____/ 
+                     *** ((#    Command-line Interface                                  
+                     *** (((                                                            
+                                                                                        
+
+sudo docker run -d --rm --cap-add=NET_ADMIN --device /dev/net/tun -e DSTRSRV_PUBLIC_ADDRESS="172.23.16.16" -e USERNAME="USER_002" -e PASSWORD="2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY" --privileged=true --network host --name redherd-asset redherd/asset
+```
+
+### Remove
+
+```bash
+$ herd-cli endpoint -s 172.23.16.16 -o docker -m remove -i 2
+
+  *                                          #                                          
+ **                                          (#                                         
+ **                                          ((#                                        
+ ***                                        #((#                                        
+  ****(         (*****    ((((((          #((((                                         
+   *******************   ((((((((((((((((((((#                                          
+     *****************   ((((((((((((((((((                                             
+          ***********       (((((((((((                                                 
+              *******      (((((((#                                                     
+                  (*****   (((   ______ _______ ______  _     _ _______  ______ ______  
+                   *****  (((   |_____/ |______ |     \ |_____| |______ |_____/ |     \ 
+                    ****  ((    |    \_ |______ |_____/ |     | |______ |    \_ |_____/ 
+                     *** ((#    Command-line Interface                                  
+                     *** (((                                                            
+                                                                                        
+
+sudo docker stop redherd-asset
+```
+
+
 ## Debian
 
 ### Add
@@ -37,7 +92,7 @@ $ herd-cli endpoint -s 172.23.16.16 -o debian -m install -i 2
                      *** (((                                                            
                                                                                         
 
-sudo bash -c "curl -k -u USER_00002:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/debian_asset_setup.sh > /tmp/script.sh && chmod +x /tmp/script.sh && /tmp/script.sh install && rm -rf /tmp/script.sh"
+sudo bash -c "curl -k -u USER_002:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/debian_asset_setup.sh > /tmp/script.sh && chmod +x /tmp/script.sh && /tmp/script.sh install && rm -rf /tmp/script.sh"
 ```
 
 ### Remove
@@ -61,7 +116,7 @@ $ herd-cli endpoint -s 172.23.16.16 -o debian -m remove -i 2
                      *** (((                                                            
                                                                                         
 
-sudo bash -c "curl -k -u USER_00002:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/debian_asset_setup.sh > /tmp/script.sh && chmod +x /tmp/script.sh && /tmp/script.sh remove && rm -rf /tmp/script.sh"
+sudo bash -c "curl -k -u USER_002:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/debian_asset_setup.sh > /tmp/script.sh && chmod +x /tmp/script.sh && /tmp/script.sh remove && rm -rf /tmp/script.sh"
 ```
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_wIVQD-FJxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="margin-bottom: 30px;" allowfullscreen></iframe>
@@ -90,7 +145,7 @@ $ herd-cli endpoint -s 172.23.16.16 -o windows -m install -i 2
                                                                                         
 
 $block = {
-[Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}; $webclient = New-Object System.Net.WebClient; $basic = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes("USER_00002" + ":" + "2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY"));$webclient.Headers["Authorization"] = "Basic ";
+[Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}; $webclient = New-Object System.Net.WebClient; $basic = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes("USER_002" + ":" + "2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY"));$webclient.Headers["Authorization"] = "Basic ";
 $webclient.DownloadFile("https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/windows_asset_setup.psm1", "script.psm1")
 Import-Module .\script.psm1; Add-Asset; Remove-Item .\script.psm1;
 }; powershell -ep bypass -nop -c $block
@@ -118,7 +173,7 @@ $ herd-cli endpoint -s 172.23.16.16 -o windows -m remove -i 2
                                                                                         
 
 $block = {
-[Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}; $webclient = New-Object System.Net.WebClient; $basic = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes("USER_00002" + ":" + "2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY"));$webclient.Headers["Authorization"] = "Basic ";
+[Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}; $webclient = New-Object System.Net.WebClient; $basic = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes("USER_002" + ":" + "2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY"));$webclient.Headers["Authorization"] = "Basic ";
 $webclient.DownloadFile("https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/windows_asset_setup.psm1", "script.psm1")
 Import-Module .\script.psm1; Remove-Asset; Remove-Item .\script.psm1;
 }; powershell -ep bypass -nop -c $block
@@ -162,7 +217,7 @@ $ herd-cli endpoint -s 172.23.16.16 -o android -m install -i 2
 
  [!] Install Termux, Termux:Boot and Termux:API from Google Play 
 
-pkg install curl -y && curl -k -u USER_00002:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/android_asset_setup.sh > /home/user/script.sh && chmod +x /home/user/script.sh && /home/user/script.sh install && rm -rf /home/user/script.sh
+pkg install curl -y && curl -k -u USER_002:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/android_asset_setup.sh > /home/user/script.sh && chmod +x /home/user/script.sh && /home/user/script.sh install && rm -rf /home/user/script.sh
 ```
 
 ### Remove
@@ -188,7 +243,7 @@ $ herd-cli endpoint -s 172.23.16.16 -o android -m remove -i 2
 
  [!] Install Termux, Termux:Boot and Termux:API from Google Play 
 
-pkg install curl -y && curl -k -u USER_00002:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/android_asset_setup.sh > /home/user/script.sh && chmod +x /home/user/script.sh && /home/user/script.sh remove && rm -rf /home/user/script.sh
+pkg install curl -y && curl -k -u USER_002:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/android_asset_setup.sh > /home/user/script.sh && chmod +x /home/user/script.sh && /home/user/script.sh remove && rm -rf /home/user/script.sh
 ```
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EgjjBNHzVYw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="margin-bottom: 30px;" allowfullscreen></iframe>
@@ -220,7 +275,7 @@ $ herd-cli endpoint -s 172.23.16.16 -o macos -m install -i 2
                      *** (((                                                            
                                                                                         
 
-sudo zsh -c "curl -k -u USER_00002:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/macos_asset_setup.sh > /tmp/script.sh && chmod +x /tmp/script.sh && /tmp/script.sh install && rm -rf /tmp/script.sh"
+sudo zsh -c "curl -k -u USER_002:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/macos_asset_setup.sh > /tmp/script.sh && chmod +x /tmp/script.sh && /tmp/script.sh install && rm -rf /tmp/script.sh"
 ```
 
 ### Remove
@@ -245,5 +300,5 @@ $ herd-cli endpoint -s 172.23.16.16 -o macos -m remove -i 2
                      *** (((                                                            
                                                                                         
 
-sudo zsh -c "curl -k -u USER_00002:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/macos_asset_setup.sh > /tmp/script.sh && chmod +x /tmp/script.sh && /tmp/script.sh remove && rm -rf /tmp/script.sh"
+sudo zsh -c "curl -k -u USER_002:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/macos_asset_setup.sh > /tmp/script.sh && chmod +x /tmp/script.sh && /tmp/script.sh remove && rm -rf /tmp/script.sh"
 ```
