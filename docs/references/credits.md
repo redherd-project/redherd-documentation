@@ -1,4 +1,4 @@
-# Developers
+# Authors
 
 <table align="center">
 
@@ -47,7 +47,7 @@ If you want to cite the RedHerd Framework you can use the following BibTeX entry
 
 ```
 @misc{RedHerdFramework,
-  author = {M. D\textquotesingle{}Amico and G. Pecoraro and S. P. Romano},
+  author = {M. D'Amico and G. Pecoraro and S. P. Romano},
   title = {RedHerd Framework},
   year = {2021},
   publisher = {GitHub},
