@@ -41,6 +41,11 @@
 </table>
 
 
+# Funding
+
+This project didn't receive any funding.
+
+
 # Citations
 
 If you want to cite the RedHerd Framework you can use the following BibTeX entry:
