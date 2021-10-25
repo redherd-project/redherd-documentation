@@ -309,7 +309,7 @@ During the RedHerd Framework lifecycle it is possible that some assets have to b
 
 ### Full Asset Ban
 
-In this situation the quickest method is to [`regenerate`](../framework-management#certification-authority-regeneration) the RedHerd Certification Authority, this action cuts off all assets contemporary.
+In this situation the quickest method is to [`regenerate`](/users-guide/framework-management/#certification-authority-regeneration) the RedHerd Certification Authority, this action cuts off all assets contemporary.
 
 ### Single Asset Ban
 
