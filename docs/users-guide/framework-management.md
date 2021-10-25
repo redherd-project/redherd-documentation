@@ -261,9 +261,6 @@ Continue? [y/N]: y
 
 ```
 
-!!! note
-    Re-initialize the Certification Authority if you want to cut-off all assets. 
-
 !!! warning
     Remove the old CA certificate and import the new one to access again the Herd-View.
 
@@ -321,9 +318,6 @@ $ sudo ./deploy.sh -s 172.23.163.163 -a 10 -u
 Continue? [y/N]: y
 
 ```
-
-!!! note
-    Re-initialize the Certification Authority if you want to definitely cut-off all assets. 
 
 !!! danger
     Assets will not be able to automatically re-join the framework since SSL certificates are not trusted anymore.
