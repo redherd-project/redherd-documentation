@@ -6,7 +6,7 @@ RedHerd uses some specialized Docker containers in order to integrate many commu
 
 The main elements of the RedHerd framework are listed hereafter:
 
-- **Assets**: multi-platform devices (`Windows`, `Linux`, `MacOS` and `Android`) that can be orchestrated to perform cyber operations;
+- **Assets**: multi-platform devices (`Windows`, `Debian-like`, `RHEL-like`, `MacOS` and `Android`) that can be orchestrated to perform cyber operations;
 - **Herd-Server**: the Node.js core of the framework which is responsible for interacting with the assets. It receives and multiplexes all the inputs from the operators thanks to an extended set of Application Programming Interfaces (API) and dispatches the output received from the assets via a Socket.IO channel;
 - **File-Server**: an FTPS-based server, which allows secure file transfer among operators and assets;
 - **OVPN-Server**: the OpenVPN gateway for all entities interacting with the framework;

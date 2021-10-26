@@ -35,7 +35,7 @@ $ herd-cli endpoint -s 172.23.16.16 -o docker -m client -i 1
                      *** (((                                                            
                                                                                         
 
-sudo docker run -d --rm --cap-add=NET_ADMIN --device /dev/net/tun -e DSTRSRV_PUBLIC_ADDRESS="172.23.16.16" -e USERNAME="USER_001" -e PASSWORD="l9tcuv6GKUDBYtcyt2fyEcktDE578cs1" --network host -v $(pwd)/redherd-certificates:/usr/local/share/ca-certificates --name redherd-client redherd/client
+sudo docker run -d --rm --cap-add=NET_ADMIN --device /dev/net/tun -e DSTRSRV_PUBLIC_ADDRESS="172.23.16.16" -e USERNAME="HyXqpOOx41" -e PASSWORD="l9tcuv6GKUDBYtcyt2fyEcktDE578cs1" --network host -v $(pwd)/redherd-certificates:/usr/local/share/ca-certificates --name redherd-client redherd/client
 ```
 
 ## Debian
@@ -62,7 +62,34 @@ $ herd-cli endpoint -s 172.23.16.16 -o debian -m client -i 1
                      *** (((                                                            
                                                                                         
 
-sudo bash -c "apt update && apt install openvpn -y && curl -k -u USER_001:l9tcuv6GKUDBYtcyt2fyEcktDE578cs1 https://172.23.16.16:8443/f6865d8c51bb7a1ba155bdfbeb3f686e/config.ovpn > ./redherd.ovpn && /usr/sbin/openvpn ./redherd.ovpn
+sudo bash -c "apt update && apt install openvpn -y && curl -k -u HyXqpOOx41:l9tcuv6GKUDBYtcyt2fyEcktDE578cs1 https://172.23.16.16:8443/f6865d8c51bb7a1ba155bdfbeb3f686e/config.ovpn > ./redherd.ovpn && /usr/sbin/openvpn ./redherd.ovpn
+```
+
+## CentOS
+
+It is just required to run the Herd-CLI one-liner on the CentOS host:
+
+```bash
+$ herd-cli endpoint -s 172.23.16.16 -o centos -m client -i 1
+
+                                                                                        
+  *                                          #                                          
+ **                                          (#                                         
+ **                                          ((#                                        
+ ***                                        #((#                                        
+  ****(         (*****    ((((((          #((((                                         
+   *******************   ((((((((((((((((((((#                                          
+     *****************   ((((((((((((((((((                                             
+          ***********       (((((((((((                                                 
+              *******      (((((((#                                                     
+                  (*****   (((   ______ _______ ______  _     _ _______  ______ ______  
+                   *****  (((   |_____/ |______ |     \ |_____| |______ |_____/ |     \ 
+                    ****  ((    |    \_ |______ |_____/ |     | |______ |    \_ |_____/ 
+                     *** ((#    Command-line Interface                                  
+                     *** (((                                                            
+                                                                                        
+
+sudo bash -c "yum install epel-release -y && yum makecache && yum install curl openvpn -y && curl -k -u HyXqpOOx41:l9tcuv6GKUDBYtcyt2fyEcktDE578cs1 https://172.23.16.16:8443/f6865d8c51bb7a1ba155bdfbeb3f686e/config.ovpn > ./redherd.ovpn && /usr/sbin/openvpn ./redherd.ovpn"
 ```
 
 ## Windows
@@ -89,7 +116,7 @@ $ herd-cli endpoint -s 172.23.16.16 -o windows -m client -i 1
                                                                                         
 
 $block = {
-[Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}; $webclient = New-Object System.Net.WebClient; $basic = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes("USER_001" + ":" + "l9tcuv6GKUDBYtcyt2fyEcktDE578cs1"));$webclient.Headers["Authorization"] = "Basic ";
+[Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}; $webclient = New-Object System.Net.WebClient; $basic = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes("HyXqpOOx41" + ":" + "l9tcuv6GKUDBYtcyt2fyEcktDE578cs1"));$webclient.Headers["Authorization"] = "Basic ";
 $webclient.DownloadFile("https://172.23.16.16:8443/f6865d8c51bb7a1ba155bdfbeb3f686e/config.ovpn", "redherd.ovpn")
 }; powershell -ep bypass -nop -c $block
 
@@ -122,7 +149,7 @@ $ herd-cli endpoint -s 172.23.16.16 -o android -m client -i 1
 
  [!] Manually download the OpenVPN config file: 
  [!] Url: https://172.23.16.16:8443/f6865d8c51bb7a1ba155bdfbeb3f686e/config.ovpn 
- [!] Username: USER_001 
+ [!] Username: HyXqpOOx41 
  [!] Password: l9tcuv6GKUDBYtcyt2fyEcktDE578cs1 
 ```
 
@@ -149,7 +176,7 @@ $ herd-cli endpoint -s 172.23.16.16 -o macos -m client -i 1
                      *** (((                                                            
                                                                                         
 
-curl -k -u USER_001:l9tcuv6GKUDBYtcyt2fyEcktDE578cs1 https://172.23.16.16:8443/f6865d8c51bb7a1ba155bdfbeb3f686e/config.ovpn > ./redherd.ovpn
+curl -k -u HyXqpOOx41:l9tcuv6GKUDBYtcyt2fyEcktDE578cs1 https://172.23.16.16:8443/f6865d8c51bb7a1ba155bdfbeb3f686e/config.ovpn > ./redherd.ovpn
 
  [!] Manually run OpenVPN with the downloaded `redherd.ovpn` config file 
 ```

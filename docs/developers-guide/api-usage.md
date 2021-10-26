@@ -104,7 +104,7 @@ Date: Fri, 01 Jul 1900 16:00:00 GMT
             "title": "Ping",
             "description": "A ping demo module",
             "binary": "ping",
-            "author": "c4dm10 & peco602",
+            "author": "b4gh33r4 & peco602",
             "topic": "debian_misc",
             "version": "1.0",
             "params": [

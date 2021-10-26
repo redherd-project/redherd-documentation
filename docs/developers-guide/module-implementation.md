@@ -41,7 +41,7 @@ The first step requires the generation an **.info** file containing the module m
 
 A metadata file, as shown in the previous code snippet, has the *info* extension and essentially consists of `json-formatted` data which must be filled as explained hereafter: 
 
-- *name* is the module name, it must match the metadata filename and should be chosen according the following convention *operatingsystem_binary*. As an example, some module names are `android_ping`, `debian_ping`, `windows_ping` and `macos_ping`;
+- *name* is the module name, it must match the metadata filename and should be chosen according the following convention *operatingsystem_binary*. As an example, some module names are `android_ping`, `debian_ping`, `centos_ping`, `windows_ping` and `macos_ping`;
 
 - *title* and *description* are two informative fields which could be fundamental to understand what actions a module is able to performs;
 
@@ -49,7 +49,7 @@ A metadata file, as shown in the previous code snippet, has the *info* extension
 
 - *author* is the module developer or its group of developers;
 
-- *topic* is a sort of group which the module is associated to. This association is related to its target operating system and scope. The list of available topics is presented in the following table, where *os* must be replaced with `debian`, `android`, `windows` or `macos`:
+- *topic* is a sort of group which the module is associated to. This association is related to its target operating system and scope. The list of available topics is presented in the following table, where *os* must be replaced with `debian`, `centos`, `android`, `windows` or `macos`:
 
 | Topic | Description |
 | --- | --- |
@@ -383,7 +383,7 @@ Hereafter, we provide some examples of modules implementation:
     "title": "Android Ping",
     "description": "Android ping demo module",
     "binary": "ping",
-    "author": "c4dm10 & peco602",
+    "author": "b4gh33r4 & peco602",
     "topic": "android_misc",
     "version": "1.0",
     "params": [{"label": "Target", "name": "target", "type": "string"}],
@@ -453,7 +453,7 @@ module.exports = AndroidPing
   "title": "Nmap TCP Scan",
   "description": "Nmap module to scan TCP ports",
   "binary": "nmap",
-  "author": "c4dm10 & peco602",
+  "author": "b4gh33r4 & peco602",
   "topic": "debian_reconnaissance",
   "version": "1.0",
   "params": 
@@ -515,7 +515,7 @@ class DebianNmapTCP extends LinuxModule
     "title": "Airgeddon WiFi Attack Suite",
     "description": "Airgeddon WiFi Attack Suite",
     "binary": "airgeddon",
-    "author": "c4dm10 & peco602",
+    "author": "b4gh33r4 & peco602",
     "topic": "debian_delivery",
     "version": "1.0",
     "params": [{"label": "Operation", "name": "operation", "type": "list", "values": ["start", "stop"]}],
@@ -664,7 +664,7 @@ module.exports = DebianAirgeddon
     "title": "Motion Remote Cam Access",
     "description": "Motion Remote Cam Access",
     "binary": "motion",
-    "author": "c4dm10 & peco602",
+    "author": "b4gh33r4 & peco602",
     "topic": "debian_video",
     "version": "1.1",
     "params": [{"label": "Operation", "name": "operation", "type": "list", "values": ["start", "stop"]}],

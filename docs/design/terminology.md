@@ -2,7 +2,7 @@
 
 | Name | Description |
 | --- | --- |
-| `asset` | The multi-platform devices (`Windows`, `Linux`, `MacOS` and `Android`) that can be orchestrated. |
+| `asset` | The multi-platform devices (`Windows`, `Debian-like`, `RHEL-like`, `MacOS` and `Android`) that can be orchestrated. |
 | `client` | The device used by an operator to interact with RedHerd components. |
 | `module` | The code implementation of a task that can be executed by asset. |
 | `process` | The dynamic instance of a module. |
