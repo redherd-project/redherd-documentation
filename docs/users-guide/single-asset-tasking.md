@@ -4,7 +4,7 @@ This section describes the steps required to interact with a single asset and as
 
 ## 1. Asset list
 
-Once you are logged in, you will be able to interact with the list of all the assets which have already joined the framework. For each asset you will find:
+Once you are logged in, you will be able to interact with the list of all assets which have already joined the framework. For each asset you will find:
 
 - Name
 - IP address
@@ -28,13 +28,13 @@ or you can perform specific tasks.
 
 ## 3. Topics attachement
 
-First, it is necessary to associate some topics to the asset in relation to the type of tasks to perform (e.g. reconnaissance).
+First, it is necessary to associate some topics to the asset in relation to the type of tasks to perform (e.g. reconnaissance, delivery).
 
 <img src="asset-topics-adding.png" style="display: block; margin-left: auto; margin-right: auto; width: 95%; border: 2px solid #000;" alt="RedHerd">
 
 ## 4. Module selection
 
-Once you have associated a topic to an assets, all the related module will be available to it and could be potentially used against targets.
+Once you have associated a topic to an assets, all the related modules become available and employable.
 
 <img src="asset-modules.png" style="display: block; margin-left: auto; margin-right: auto; width: 95%; border: 2px solid #000;" alt="RedHerd">
 
@@ -46,7 +46,7 @@ Before executing a module it is necessary to install all its dependencies on the
 
 ## 6. Module execution
 
-You must insert the required parameters:
+You have to insert the required parameters:
 
 <img src="module-start.png" style="display: block; margin-left: auto; margin-right: auto; width: 95%; border: 2px solid #000;" alt="RedHerd">
 
