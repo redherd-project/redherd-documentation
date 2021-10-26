@@ -4,7 +4,7 @@ This section describes the steps required to interact with a single asset and as
 
 ## 1. Asset list
 
-Once you are logged in, you will be able to interact with the list of all assets which have already joined the framework. For each asset you will find:
+Once you are logged in, you will be able to interact with the list of all the assets which have already joined the framework. For each asset you will find:
 
 - Name
 - IP address
