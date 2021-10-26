@@ -169,7 +169,6 @@ $ herd-cli endpoint -s 172.23.16.16 -o centos -m remove -i 2
 sudo bash -c "curl -k -u 78l8zUBjpm:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/debian_asset_setup.sh > /tmp/script.sh && chmod +x /tmp/script.sh && /tmp/script.sh remove && rm -rf /tmp/script.sh"
 ```
 
-
 ## Windows
 
 ### Add
@@ -345,6 +344,24 @@ $ herd-cli endpoint -s 172.23.16.16 -o macos -m remove -i 2
                                                                                         
 
 sudo zsh -c "curl -k -u 78l8zUBjpm:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/macos_asset_setup.sh > /tmp/script.sh && chmod +x /tmp/script.sh && /tmp/script.sh remove && rm -rf /tmp/script.sh"
+```
+
+## Asset Ban
+
+During the RedHerd Framework lifecycle it is possible that some assets have to be excluded from the operative network due to *kidnapping* or simply for administrative reasons. This scenario could involve mainly two actions: **Full Asset Ban** and **Single Asset Ban**.
+
+### Full Asset Ban
+
+In this situation the quickest method is to [`regenerate`](https://redherd.readthedocs.io/en/latest/users-guide/framework-management/#certification-authority-regeneration) the RedHerd Certification Authority, this action cuts off all assets contemporary.
+
+### Single Asset Ban
+
+In this case Herd-CLI offers an administrative command which allows to revoke the VPN certificate assigned to a specific asset. This command is part of the *asset* realm and requires the asset name.
+
+```bash
+$ sudo herd-cli asset -b vVDNDUUGjb
+ [-] Attempting to revoke client certificate
+ [!] Certificate successfully revoked
 ```
 
 ## Asset Ban
