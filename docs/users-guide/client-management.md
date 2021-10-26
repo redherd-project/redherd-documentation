@@ -65,9 +65,6 @@ $ herd-cli endpoint -s 172.23.16.16 -o debian -m client -i 1
 sudo bash -c "apt update && apt install openvpn -y && curl -k -u USER_001:l9tcuv6GKUDBYtcyt2fyEcktDE578cs1 https://172.23.16.16:8443/f6865d8c51bb7a1ba155bdfbeb3f686e/config.ovpn > ./redherd.ovpn && /usr/sbin/openvpn ./redherd.ovpn
 ```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TPh7muGw2AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="margin-bottom: 30px;" allowfullscreen></iframe>
-
-
 ## Windows
 
 Download and install the [`OpenVPN-Client`](https://openvpn.net/client-connect-vpn-for-windows/), then use the `PowerShell` one-liner to download the `OpenVPN` configuration.
@@ -98,8 +95,6 @@ $webclient.DownloadFile("https://172.23.16.16:8443/f6865d8c51bb7a1ba155bdfbeb3f6
 
  [!] Manually run OpenVPN with downloaded redherd.ovpn config file 
 ```
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/N1nMeu3gG9k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="margin-bottom: 30px;" allowfullscreen></iframe>
 
 ## Android
 
@@ -159,7 +154,7 @@ curl -k -u USER_001:l9tcuv6GKUDBYtcyt2fyEcktDE578cs1 https://172.23.16.16:8443/f
  [!] Manually run OpenVPN with the downloaded `redherd.ovpn` config file 
 ```
 
-## Access Herd-View
+## Herd-View Access
 
 !!! warning
     In order to access Herd-View it is mandatory to download and install RedHerd Certification Authority certificate.
@@ -169,3 +164,7 @@ After successfully joined the framework VPN, connect to Herd-View using a browse
 <img src="download-ca.png" style="display: block; margin-left: auto; margin-right: auto; width: 95%; border: 2px solid #000;" alt="RedHerd">
 
 <img src="download-ca-detail.png" style="display: block; margin-left: auto; margin-right: auto; width: 95%; border: 2px solid #000;" alt="RedHerd">
+
+Once the certificate has been trusted, it is possible to fill the login page with your user credentials.h
+
+<img src="login.png" style="display: block; margin-left: auto; margin-right: auto; width: 95%; border: 2px solid #000;" alt="RedHerd">

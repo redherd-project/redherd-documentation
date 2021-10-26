@@ -119,8 +119,6 @@ $ herd-cli endpoint -s 172.23.16.16 -o debian -m remove -i 2
 sudo bash -c "curl -k -u USER_002:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/debian_asset_setup.sh > /tmp/script.sh && chmod +x /tmp/script.sh && /tmp/script.sh remove && rm -rf /tmp/script.sh"
 ```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_wIVQD-FJxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="margin-bottom: 30px;" allowfullscreen></iframe>
-
 ## Windows
 
 ### Add
@@ -178,8 +176,6 @@ $webclient.DownloadFile("https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a9
 Import-Module .\script.psm1; Remove-Asset; Remove-Item .\script.psm1;
 }; powershell -ep bypass -nop -c $block
 ```
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CCePgiJYS34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="margin-bottom: 30px;" allowfullscreen></iframe>
 
 ## Android
 
@@ -245,9 +241,6 @@ $ herd-cli endpoint -s 172.23.16.16 -o android -m remove -i 2
 
 pkg install curl -y && curl -k -u USER_002:2GHDUWvZxtbn18LeiVoEv4UmhGv0rUrY https://172.23.16.16:8443/50f3331a80894d85bcda8c4b404a919c/android_asset_setup.sh > /home/user/script.sh && chmod +x /home/user/script.sh && /home/user/script.sh remove && rm -rf /home/user/script.sh
 ```
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EgjjBNHzVYw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="margin-bottom: 30px;" allowfullscreen></iframe>
-
 
 ## MacOS
 

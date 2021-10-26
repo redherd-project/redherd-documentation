@@ -15,7 +15,8 @@ nav:
     - 'Framework Management': 'users-guide/framework-management.md'
     - 'Client Management': 'users-guide/client-management.md'
     - 'Asset Management': 'users-guide/asset-management.md'
-    - 'Asset Tasking': 'users-guide/asset-tasking.md'
+    - 'Single Asset Tasking': 'users-guide/single-asset-tasking.md'
+    - 'Multiple Asset Tasking': 'users-guide/multiple-asset-tasking.md'
   - 'Developers Guide':
     - 'Module Implementation': 'developers-guide/module-implementation.md'
     - 'API Usage': 'developers-guide/api-usage.md'

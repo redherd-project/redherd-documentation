@@ -40,28 +40,33 @@
 </tr>
 </table>
 
+# Cite this work
+If you use RedHerd Framework for your research activity, cite the following paper published by MDPI (Multidisciplinary Digital Publishing Institute) 
+[`https://www.mdpi.com/2624-6120/2/4/38`](https://www.mdpi.com/2624-6120/2/4/38)
 
-# Funding
-
-This project didn't receive any funding.
-
-
-# Citations
-
-If you want to cite the RedHerd Framework you can use the following BibTeX entry:
-
-```
-@misc{RedHerdFramework,
-  author = {M. D'Amico and G. Pecoraro and S. P. Romano},
-  title = {RedHerd Framework},
-  year = {2021},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/redherd-project/redherd-framework.git}},
-}
-```
 
 # Contact us
 
-Feel free to contact us at this e-mail address:
+<table>
+<tr>
+<td style="border: 0px !important; background-color: white;">
+<b>E-mail</b>
+</td>
+<td style="border: 0px !important; background-color: white;">
 <img src="contactus.png" width="200px" alt="Contact us">
+</td>
+</tr>
+<tr>
+<td style="border: 0px !important; background-color: white;">
+<b>Twitter</b>
+</td>
+<td style="border: 0px !important; background-color: white;">
+<a href="https://www.twitter.com/RedHerdProject">@RedHerdProject</a>
+</td>
+</tr>
+</table>
+
+# Funding
+
+This is a non-profit project which received neither funding nor sponsorship.
+
