@@ -1,5 +1,9 @@
 <h1>Troubleshooting</h1>
 
+### Freezing during framework deployment
+
+Ensure the minimum [`System requirements`](/getting-started/setup/) are fulfilled
+
 ### Cannot connect to Herd-View
 
 1. Ensure all VPNs have been disconnected
@@ -31,7 +35,7 @@ If the problem is not solved:
 3. Login into the `Herd-View` to get a fresh token
 4. Try to execute modules on online assets
 
-If the problem is not solved:
+If the problem is still not solved:
 
 1. Logout from the `Herd-View`
 2. Delete browser cookies

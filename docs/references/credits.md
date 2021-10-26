@@ -40,9 +40,10 @@
 </tr>
 </table>
 
+
 # Cite this work
-If you use RedHerd Framework for your research activity, cite the following paper published by MDPI (Multidisciplinary Digital Publishing Institute) 
-[`https://www.mdpi.com/2624-6120/2/4/38`](https://www.mdpi.com/2624-6120/2/4/38)
+
+If you use RedHerd Framework for your research activity, cite the following paper [`RedHerd: Offensive Cyberspace Operations as a Service`](https://www.mdpi.com/2624-6120/2/4/38) published by MDPI (Multidisciplinary Digital Publishing Institute) 
 
 
 # Contact us
